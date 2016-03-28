@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.shypl.flexunit</groupId>
@@ -50,51 +51,21 @@
 		<skipTests>true</skipTests>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>shypl-thirdparty</id>
-			<url>http://178.132.202.170:8080/nexus/content/repositories/thirdparty/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>sonatype-releases</id>
-			<url>https://oss.sonatype.org/content/repositories/releases/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>shypl-thirdparty</id>
-			<url>http://178.132.202.170:8080/nexus/content/repositories/thirdparty/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-		<pluginRepository>
-			<id>sonatype-releases</id>
-			<url>https://oss.sonatype.org/content/repositories/releases/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
+	<dependencies>
+		<dependency>
+			<groupId>com.adobe.flash.framework</groupId>
+			<artifactId>playerglobal</artifactId>
+			<version>12.0</version>
+			<type>swc</type>
+		</dependency>
+		<dependency>
+			<groupId>org.flexunit</groupId>
+			<artifactId>flexunit</artifactId>
+			<version>4.1.0</version>
+			<classifier>as3</classifier>
+			<type>swc</type>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -104,6 +75,7 @@
 				<artifactId>flexmojos-maven-plugin</artifactId>
 				<version>7.1.0</version>
 				<extensions>true</extensions>
+
 				<configuration>
 					<debug>true</debug>
 				</configuration>
@@ -139,26 +111,26 @@
 		</plugins>
 	</build>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.flex</groupId>
-			<artifactId>framework</artifactId>
-			<version>4.15.0</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>com.adobe.flash.framework</groupId>
-			<artifactId>playerglobal</artifactId>
-			<version>12.0</version>
-			<type>swc</type>
-		</dependency>
-		<dependency>
-			<groupId>org.flexunit</groupId>
-			<artifactId>flexunit</artifactId>
-			<version>4.1.0</version>
-			<classifier>as3</classifier>
-			<type>swc</type>
-		</dependency>
-	</dependencies>
+	<repositories>
+		<repository>
+			<id>shypl-thirdparty</id>
+			<url>http://178.132.202.170:8080/nexus/content/repositories/thirdparty/</url>
+		</repository>
+		<repository>
+			<id>sonatype-releases</id>
+			<url>https://oss.sonatype.org/content/repositories/releases/</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>shypl-thirdparty</id>
+			<url>http://178.132.202.170:8080/nexus/content/repositories/thirdparty/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>sonatype-releases</id>
+			<url>https://oss.sonatype.org/content/repositories/releases/</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 </project>
