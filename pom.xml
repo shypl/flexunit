@@ -119,15 +119,23 @@
 
 	<repositories>
 		<repository>
-			<id>shypl</id>
-			<url>http://nexus.shypl.org/content/groups/public/</url>
+			<id>shypl-thirdparty</id>
+			<url>http://nexus.shypl.org/content/repositories/thirdparty/</url>
+		</repository>
+		<repository>
+			<id>sonatype</id>
+			<url>https://oss.sonatype.org/content/repositories/releases/</url>
 		</repository>
 	</repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
 			<id>shypl-thirdparty</id>
-			<url>http://nexus.shypl.org/content/groups/public/</url>
+			<url>http://nexus.shypl.org/content/repositories/thirdparty/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>sonatype</id>
+			<url>https://oss.sonatype.org/content/repositories/releases/</url>
 		</pluginRepository>
 	</pluginRepositories>
 
