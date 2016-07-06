@@ -63,6 +63,38 @@
 			<version>4.15.0</version>
 			<type>pom</type>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.flex.framework</groupId>
+			<artifactId>framework</artifactId>
+			<version>4.15.0</version>
+			<type>swc</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.flex.framework</groupId>
+			<artifactId>mx</artifactId>
+			<version>4.15.0</version>
+			<type>swc</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.flex.framework</groupId>
+			<artifactId>spark</artifactId>
+			<version>4.15.0</version>
+			<type>swc</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.flex.framework</groupId>
+			<artifactId>sparkskins</artifactId>
+			<version>4.15.0</version>
+			<type>swc</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.flex.framework</groupId>
+			<artifactId>textLayout</artifactId>
+			<version>4.15.0</version>
+			<type>swc</type>
+		</dependency>
+
 		<dependency>
 			<groupId>org.flexunit</groupId>
 			<artifactId>flexunit</artifactId>
@@ -80,11 +112,6 @@
 				<artifactId>flexmojos-maven-plugin</artifactId>
 				<version>7.1.0</version>
 				<extensions>true</extensions>
-
-				<configuration>
-					<debug>true</debug>
-				</configuration>
-
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.flex</groupId>
@@ -93,6 +120,10 @@
 						<type>pom</type>
 					</dependency>
 				</dependencies>
+
+				<configuration>
+					<debug>true</debug>
+				</configuration>
 
 				<executions>
 					<execution>
